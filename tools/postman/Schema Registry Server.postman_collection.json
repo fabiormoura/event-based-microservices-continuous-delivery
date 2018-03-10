@@ -1,0 +1,81 @@
+{
+	"info": {
+		"name": "Schema Registry Server",
+		"_postman_id": "89b65c97-8e44-4c8e-b494-8d639e5bc49e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"subject\": \"User\",\n\t\"format\": \"avro\",\n\t\"definition\": \"{ \\\"type\\\": \\\"record\\\", \\\"name\\\": \\\"User\\\", \\\"fields\\\": [{\\\"name\\\": \\\"name\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"age\\\", \\\"type\\\": \\\"int\\\"}, {\\\"name\\\": \\\"emails\\\", \\\"type\\\": {\\\"type\\\": \\\"array\\\", \\\"items\\\": \\\"string\\\"}}] }\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8990",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Schemas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8990/User/avro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"User",
+						"avro"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Schema {subject}/avro/v{version}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8990/User/avro/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"User",
+						"avro",
+						"v1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
