@@ -76,6 +76,28 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Show Schema schemas/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8990/schemas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"schemas",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
