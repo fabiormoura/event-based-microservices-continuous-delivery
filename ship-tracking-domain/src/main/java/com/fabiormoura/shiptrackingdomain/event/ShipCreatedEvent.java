@@ -1,4 +1,4 @@
-package com.fabiormoura.shippingtrackingdomain.event;
+package com.fabiormoura.shiptrackingdomain.event;
 
 public class ShipCreatedEvent {
     private final String id;

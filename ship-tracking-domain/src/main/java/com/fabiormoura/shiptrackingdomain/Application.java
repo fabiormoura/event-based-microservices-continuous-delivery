@@ -1,4 +1,4 @@
-package com.fabiormoura.shippingtrackingdomain;
+package com.fabiormoura.shiptrackingdomain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

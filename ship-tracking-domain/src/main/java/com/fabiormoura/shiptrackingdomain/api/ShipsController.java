@@ -1,6 +1,6 @@
-package com.fabiormoura.shippingtrackingdomain.api;
+package com.fabiormoura.shiptrackingdomain.api;
 
-import com.fabiormoura.shippingtrackingdomain.command.CreateShipCommand;
+import com.fabiormoura.shiptrackingdomain.command.CreateShipCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.*;
 

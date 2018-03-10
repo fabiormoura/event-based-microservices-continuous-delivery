@@ -1,4 +1,4 @@
-package com.fabiormoura.shippingtrackingdomain;
+package com.fabiormoura.shiptrackingdomain;
 
 import com.mongodb.MongoClient;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;

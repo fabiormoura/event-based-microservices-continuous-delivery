@@ -1,4 +1,4 @@
-package com.fabiormoura.shippingtrackingdomain.command;
+package com.fabiormoura.shiptrackingdomain.command;
 
 import org.axonframework.common.IdentifierFactory;
 

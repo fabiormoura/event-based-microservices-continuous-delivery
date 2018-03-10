@@ -1,7 +1,7 @@
-package com.fabiormoura.shippingtrackingdomain.domain;
+package com.fabiormoura.shiptrackingdomain.domain;
 
-import com.fabiormoura.shippingtrackingdomain.command.CreateShipCommand;
-import com.fabiormoura.shippingtrackingdomain.event.ShipCreatedEvent;
+import com.fabiormoura.shiptrackingdomain.command.CreateShipCommand;
+import com.fabiormoura.shiptrackingdomain.event.ShipCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.eventsourcing.EventSourcingHandler;
