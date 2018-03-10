@@ -6,9 +6,9 @@ import org.springframework.cloud.stream.schema.server.EnableSchemaRegistryServer
 
 @SpringBootApplication
 @EnableSchemaRegistryServer
-public class SchemaRegistryServerApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SchemaRegistryServerApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
