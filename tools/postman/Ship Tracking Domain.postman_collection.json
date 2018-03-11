@@ -1,0 +1,31 @@
+{
+	"info": {
+		"name": "Ship Tracking Domain",
+		"_postman_id": "dfe41454-56c6-4e26-b60b-aed1c3083324",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Ship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/ships",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ships"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
