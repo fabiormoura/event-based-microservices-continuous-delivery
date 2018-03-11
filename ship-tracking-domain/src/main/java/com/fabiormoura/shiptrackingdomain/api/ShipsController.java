@@ -4,6 +4,8 @@ import com.fabiormoura.shiptrackingdomain.command.CreateShipCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.CompletableFuture;
+
 import static org.springframework.http.HttpStatus.ACCEPTED;
 
 @RestController
@@ -17,9 +19,8 @@ public class ShipsController {
 
     @ResponseStatus(ACCEPTED)
     @PostMapping
-    public CreateShipCommand create() {
+    public CompletableFuture<Object> create() {
         CreateShipCommand command = new CreateShipCommand();
-        gateway.send(command);
-        return command;
+        return gateway.send(command);
     }
 }
