@@ -40,6 +40,7 @@ dependencyManagement {
         dependency "org.axonframework:axon-spring-boot-starter:${axonVersion}"
         dependency "org.axonframework:axon-mongo:${axonVersion}"
         dependency "org.axonframework:axon-amqp:${axonVersion}"
+        dependency "org.apache.avro:avro:1.8.2"
     }
 }
 
@@ -51,10 +52,13 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-amqp'
 
     compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.cloud:spring-cloud-stream-schema'
 
     compile 'org.axonframework:axon-spring-boot-starter'
     compile 'org.axonframework:axon-mongo'
     compile 'org.axonframework:axon-amqp'
+
+    compile 'org.apache.avro:avro'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
