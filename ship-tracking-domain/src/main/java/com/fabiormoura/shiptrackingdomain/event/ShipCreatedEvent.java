@@ -1,6 +1,8 @@
 package com.fabiormoura.shiptrackingdomain.event;
 
-public class ShipCreatedEvent {
+import java.io.Serializable;
+
+public class ShipCreatedEvent implements Serializable {
     private String id;
 
     @SuppressWarnings("unchecked")
