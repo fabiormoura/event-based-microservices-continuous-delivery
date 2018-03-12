@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "ShipCreatedEvent",
+  "namespace": "com.fabiormoura.shiptrackingdomain.event",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    }
+  ]
+}

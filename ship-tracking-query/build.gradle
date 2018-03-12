@@ -1,0 +1,66 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.fabiormoura'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+ext {
+    springCloudVersion = 'Finchley.M8'
+    axonVersion = '3.1'
+    springIntegrationVersion = '5.0.3.RELEASE'
+}
+
+dependencyManagement {
+
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+    dependencies {
+        dependency "org.axonframework:axon-spring-boot-starter:${axonVersion}"
+        dependency "org.springframework.integration:spring-integration-core:${springIntegrationVersion}"
+
+        dependency "org.apache.avro:avro:1.8.2"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'org.springframework.boot:spring-boot-starter-amqp'
+    compile 'org.springframework.boot:spring-boot-starter-integration'
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.integration:spring-integration-amqp'
+
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.cloud:spring-cloud-stream-schema'
+
+    compile 'org.axonframework:axon-spring-boot-starter'
+
+    compile 'org.apache.avro:avro'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

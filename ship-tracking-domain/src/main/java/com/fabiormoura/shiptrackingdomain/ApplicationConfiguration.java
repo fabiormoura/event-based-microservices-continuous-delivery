@@ -32,7 +32,7 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public IntegrationFlow eventbusOutboundGateway(AmqpTemplate amqpTemplate, MessageChannel eventBusOutboundChannel, @Qualifier("avroSchemaMessageConverter") MessageConverter messageConverter) {
+    public IntegrationFlow eventBusOutboundIntegrationFlow(AmqpTemplate amqpTemplate, MessageChannel eventBusOutboundChannel, @Qualifier("avroSchemaMessageConverter") MessageConverter messageConverter) {
         return IntegrationFlows
                 .from(eventBusOutboundChannel)
                 .transform(messageConverter, "toMessage")
