@@ -31,7 +31,7 @@ public class ApplicationConfiguration {
     @Bean
     public Map<String, Class<?>> eventsMap() {
         Map<String, Class<?>> eventsMap = new HashMap<>();
-        eventsMap.put("application/vnd.shipcreatedevent.v1+avro", ShipCreatedEvent.class);
+        eventsMap.put("shipcreatedevent", ShipCreatedEvent.class);
         return eventsMap;
     }
 

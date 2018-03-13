@@ -3,6 +3,7 @@ package com.fabiormoura;
 import org.springframework.integration.transformer.AbstractTransformer;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.converter.MessageConverter;
+import org.springframework.util.StringUtils;
 
 import java.util.Map;
 
@@ -19,7 +20,13 @@ public class AvroPayloadTransformer extends AbstractTransformer {
 
     @Override
     protected Object doTransform(Message<?> message) throws Exception {
-        String eventType = (String) message.getHeaders().get(CONTENT_TYPE);
+        String eventContentType = (String) message.getHeaders().get(CONTENT_TYPE);
+        String eventType = eventContentType
+                .replace("application/vnd.", "")
+                .replaceAll("\\.v\\d\\+avro", "");
+        if (StringUtils.isEmpty(eventType)) {
+            throw new Exception(String.format("Event class not found for %s", eventContentType));
+        }
         return messageConverter.fromMessage(message, eventsMap.get(eventType));
     }
 }
