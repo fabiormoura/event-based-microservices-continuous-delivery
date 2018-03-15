@@ -1,4 +1,4 @@
-package com.fabiormoura;
+package com.fabiormoura.shiptrackingquery.avro;
 
 import org.springframework.integration.transformer.AbstractTransformer;
 import org.springframework.messaging.Message;

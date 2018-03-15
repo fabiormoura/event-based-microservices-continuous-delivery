@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "ShipCreatedEvent",
-  "namespace": "com.fabiormoura.shiptrackingdomain.event",
+  "namespace": "com.fabiormoura.shiptrackingquery.event",
   "fields": [
     {
       "name": "id",
